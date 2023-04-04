@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Wattigny Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo-color.jpg" class="logo">
+                <ul>
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#About">About</a></li>
+                    <li> <a href="#services">Services</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text"> <p>Artist, Photographer, Entrepreneur</p>
+                <h1>Hello, my name is <span>Christophe</span>!</h1>
+            </div>
+        </div>
+        <!-- About -->
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-1"> <img src="Images/BackgroundPortfolio.PNG" ;>
+                    </div>
+                    <div class="about-2">
+                        <H1 class="sub-title">About Me</H1>
+                        <p> I am an aspiring artist and photographer with over a decade of experience with my crafts. I do commissioned work, as well as original content. </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Artist</span><br> -Custom made leather jackets, and commissioned pieces</li>
+                                <li><span>Photographer</span><br>-Specializing in analog film, primarily Polaroid. </li>
+                                <li><span>Entrepreneur</span><br> -Successful founder of two small businesses</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>Art</span><br>- I have over 10 years of experience working in multiple mediums,
+                                    with emphasis on custom leather painting.</li>
+                                <li><span>Photography</span><br>- Portfolio of over 2000 analog images. Experience working
+                                    with local models and influencers in brand building. </li>
+                                <li><span>Entrepreneurship</span><br> -10 years in the field <br>-Brother's Knives:
+                                    Primarily festival work (2010-2013)<br> -WattWare: My own custom clothing designs as
+                                    well as commissioned works. (2016-present) </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>High School</span><br>- Optimus Prepatory Academy (2013) </li>
+                                <li><span>College</span><br>- Texas A&M University - Texarkana (2019) <br>-B.S. in Politcal
+                                    Science <br>-President of Gaming Club, Co-Founder of Adventure Club, Member of the
+                                    Honor's Society </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services -->
+        <div id="services">
+            <div class="container">
+                <H1 class="sub-title">My Services</H1>
+                <div class="services-list">
+                    <div>
+                        <h2>Painting</h2>
+                        <a href="#Portfolio">Learn more</a>
+                    </div>
+                    <div>
+                        <h2>Photography</h2>
+
+                        <!-- insert gallery link and staement -->
+                        <a href="#Portfolio">Learn more</a>
+                    </div>
+                    <div>
+                        <h2>Entrepreneur</h2>
+                        
+                        <!--ADD  <a href="#">Learn more</a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio -->
+            <div id="Portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="Jacket Portfolio/Jacket/J1Back.JPG">
+                            <div class="layer">
+                                <h3>My Jacket Gallery</h3>
+                                <a href="Jacket Portfolio/index.html">Click Here</a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="Poloroid Portfolio/Poloroid/Tree.JPG">
+                            <h3>My Poloroid Gallery</h3>
+                            <a href="Poloroid Portfolio/index.html">Click Here</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- Contact -->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-info">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p>tophewattigny@gmail.com</p>
+                            <p>(903)-556-2619</p>
+                            <!-- Fill when accounts are created -->
+                            <p class="future-links">*future social media information*</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
